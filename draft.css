@@ -300,3 +300,12 @@ footer a {
     text-decoration: none;
     color: black;
 }
+
+.main-container { 
+    width: 1200px; 
+}
+
+.main-container { 
+    width: 100%; 
+    max-width: 1200px; 
+}

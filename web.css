@@ -195,5 +195,14 @@ footer {
     margin: 0%;
 }
 
+.main-container { 
+    width: 1200px; 
+}
+
+
+.main-container { 
+    width: 100%; 
+    max-width: 1200px; 
+}
 
 
