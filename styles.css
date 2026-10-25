@@ -51,6 +51,17 @@ header {
     color: white;
 }
 
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    line-height: 1;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
 
 .hero {
     display: flex;
@@ -205,6 +216,7 @@ header {
 .project-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -224,6 +236,10 @@ header {
     object-fit: cover;
     display: block;
     transition: 0.3s;
+}
+
+.project-image-upper {
+    object-position: center 35%;
 }
 
 .project-card a {
@@ -308,6 +324,11 @@ footer {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.project-page-image img.shot-contain {
+    object-fit: contain;
+    background-color: #eef3f0;
 }
 
 
@@ -433,4 +454,313 @@ footer {
 .main-container { 
     width: 100%; 
     max-width: 1200px; 
+}
+
+
+/* =====================
+   RESPONSIVE LAYOUT
+   ===================== */
+
+/* Laptops and small desktops */
+@media (max-width: 1199px) {
+    .hero {
+        padding: 70px 7%;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    #pfp {
+        width: 250px;
+        height: 250px;
+    }
+
+    .profile-container {
+        margin-left: 30px;
+    }
+
+    .about-page {
+        gap: 50px;
+        padding: 80px 7%;
+    }
+
+    .about-image img {
+        width: 300px;
+        height: 400px;
+    }
+
+    .project-page-info {
+        padding: 35px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 70px 7%;
+        gap: 40px;
+    }
+
+    .hero-text {
+        max-width: 640px;
+    }
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-container {
+        margin-left: 0;
+    }
+
+    .about-preview {
+        flex-direction: column;
+        padding: 70px 7%;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 48%;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .about-card h2 {
+        font-size: 30px;
+    }
+
+    .project-page-info {
+        padding: 30px;
+    }
+
+    .project-page-info h2 {
+        font-size: 27px;
+    }
+
+    .about-page {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        padding: 70px 7%;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-details {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 40px 7% 70px;
+    }
+
+    .detail-card {
+        flex: 1 1 45%;
+    }
+}
+
+/* Phones */
+@media (max-width: 767px) {
+    header {
+        padding: 16px 6%;
+        flex-wrap: wrap;
+    }
+
+    .reload {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        background-color: #18352b;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    header.nav-open nav {
+        display: block;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 6% 16px;
+    }
+
+    .links li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .links li:last-child {
+        border-bottom: none;
+    }
+
+    .links a {
+        display: block;
+        padding: 14px 0;
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 55px 6%;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .small-title {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    #pfp {
+        width: 210px;
+        height: 210px;
+        border-width: 6px;
+    }
+
+    .about-preview {
+        padding: 60px 6%;
+    }
+
+    .about-card,
+    .focus-card {
+        padding: 24px;
+    }
+
+    .about-card h2 {
+        font-size: 26px;
+    }
+
+    .projects,
+    .project-list {
+        padding: 60px 6%;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .section-description {
+        margin-bottom: 35px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .projects-header {
+        padding: 70px 6%;
+    }
+
+    .projects-header h1 {
+        font-size: 38px;
+    }
+
+    .project-page-card {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .project-page-image {
+        width: 100%;
+        min-height: 220px;
+    }
+
+    .project-page-info {
+        width: 100%;
+        padding: 28px 22px;
+    }
+
+    .project-page-info h2 {
+        font-size: 26px;
+    }
+
+    .project-page-info p:not(.project-number):not(.technology) {
+        font-size: 15px;
+    }
+
+    .about-page {
+        padding: 55px 6%;
+        gap: 30px;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 300px;
+        height: 380px;
+    }
+
+    .about-text h1 {
+        font-size: 36px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-details {
+        flex-direction: column;
+        padding: 30px 6% 60px;
+    }
+
+    .detail-card {
+        flex: 1 1 auto;
+    }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+    .reload {
+        font-size: 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    #pfp {
+        width: 180px;
+        height: 180px;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .projects-header h1 {
+        font-size: 34px;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+    }
 }

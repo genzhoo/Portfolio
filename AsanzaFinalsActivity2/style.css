@@ -1,0 +1,19 @@
+*{
+    flex-wrap: nowrap;
+    font-size: 70px;
+    scroll-behavior: smooth;
+}
+
+.goback {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #18352b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.goback:hover {
+    text-decoration: underline;
+}

@@ -1,58 +1,59 @@
-const project = document.getElementById("project");
+const projectImages = document.querySelectorAll(".project-image");
 
-const project1 = document.getElementById("project1");
+projectImages.forEach(
+    function(image) {
+        image.addEventListener(
+            "mouseover", function() {
+                image.style.transform = "scale(1.05)";
+            }
+        );
 
-const project2 = document.getElementById("project2");
-
-project.addEventListener(
-    "mouseover", function() {
-        project.style.transform = "scale(1.05)";
-    }
-);
-
-project.addEventListener(
-    "mouseout", function() {
-        project.style.transform = "scale(1)";
-    }
-);
-
-
-project1.addEventListener(
-    "mouseover", function() {
-        project1.style.transform = "scale(1.05)";
-    }
-);
-
-project1.addEventListener(
-    "mouseout", function() {
-        project1.style.transform = "scale(1)";
-    }
-);
-
-
-project2.addEventListener(
-    "mouseover", function() {
-        project2.style.transform = "scale(1.05)";
-    }
-);
-
-project2.addEventListener(
-    "mouseout", function() {
-        project2.style.transform = "scale(1)";
+        image.addEventListener(
+            "mouseout", function() {
+                image.style.transform = "scale(1)";
+            }
+        );
     }
 );
 
 
 const btn = document.getElementById("btn");
 
-btn.addEventListener(
-    "mouseover", function() {
-        btn.style.transform = "scale(1.05)";
-    }
-);
+if (btn) {
+    btn.addEventListener(
+        "mouseover", function() {
+            btn.style.transform = "scale(1.05)";
+        }
+    );
 
-btn.addEventListener(
-    "mouseout", function() {
-        btn.style.transform = "scale(1)";
-    }
-);
+    btn.addEventListener(
+        "mouseout", function() {
+            btn.style.transform = "scale(1)";
+        }
+    );
+}
+
+
+const navToggle = document.querySelector(".nav-toggle");
+
+if (navToggle) {
+    const siteHeader = navToggle.closest("header");
+
+    navToggle.addEventListener(
+        "click", function() {
+            const isOpen = siteHeader.classList.toggle("nav-open");
+            navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        }
+    );
+
+    siteHeader.querySelectorAll(".links a").forEach(
+        function(link) {
+            link.addEventListener(
+                "click", function() {
+                    siteHeader.classList.remove("nav-open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                }
+            );
+        }
+    );
+}

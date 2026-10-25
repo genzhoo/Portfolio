@@ -149,6 +149,7 @@ aside {
     height: 700px;
     display: flex;
     justify-content: center;
+    object-fit: fill;
 }
 
 footer {
